@@ -1,142 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal CV</title>
-  <style>
-    /* Basic Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    /* Navigation Bar */
-    .navbar {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    .navbar a {
-      float: left;
-      display: block;
-      color: #f4f4f4;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .navbar a:hover,
-    .navbar a.active {
-      background-color: #575757;
-      color: #fff;
-    }
-
-    /* Tab Content */
-    .tabcontent {
-      display: none;
-      padding: 20px;
-      background-color: #fff;
-      margin: 20px;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bashir Sadeghi - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background: #007bff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        .navbar a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .links a, .papers a, .projects a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .download {
+            margin-top: 20px;
+        }
+        .download a {
+            text-decoration: none;
+            color: white;
+            background: #28a745;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .download a:hover {
+            background: #218838;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation Tabs -->
-  <div class="navbar">
-    <a class="tablinks" onclick="openTab(event, 'About')">About</a>
-    <a class="tablinks" onclick="openTab(event, 'Experience')">Experience</a>
-    <a class="tablinks" onclick="openTab(event, 'Education')">Education</a>
-    <a class="tablinks" onclick="openTab(event, 'Skills')">Skills</a>
-    <a class="tablinks" onclick="openTab(event, 'Projects')">Projects</a>
-    <a class="tablinks" onclick="openTab(event, 'Contact')">Contact</a>
-  </div>
 
-  <!-- About Tab -->
-  <div id="About" class="tabcontent">
-    <h2>About Me</h2>
-    <p>
-      [Insert a brief bio here. For example, explain your background, interests, and what drives you in your professional life.]
-    </p>
-  </div>
+    <div class="navbar">
+        <a href="#" onclick="showSection('about')">About</a>
+        <a href="#" onclick="showSection('education')">Education</a>
+        <a href="#" onclick="showSection('experience')">Experience</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('patents')">Patents</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
 
-  <!-- Experience Tab -->
-  <div id="Experience" class="tabcontent">
-    <h2>Experience</h2>
-    <p>
-      [List your work experience, including positions held, companies, durations, and key responsibilities or achievements.]
-    </p>
-  </div>
+    <div class="container">
 
-  <!-- Education Tab -->
-  <div id="Education" class="tabcontent">
-    <h2>Education</h2>
-    <p>
-      [Detail your academic background, degrees obtained, institutions attended, and any relevant coursework or certifications.]
-    </p>
-  </div>
+        <!-- About Section -->
+        <div id="about" class="section active">
+            <h1>Bashir Sadeghi</h1>
+            <p><strong>Location:</strong> Haslett, MI, USA</p>
+            <p><strong>Email:</strong> <a href="mailto:sadeghib@msu.edu">sadeghib@msu.edu</a></p>
+            <p><strong>Phone:</strong> +1 (517) 940-1631</p>
+            <h2>Professional Overview</h2>
+            <p>Motivated professional in machine learning, deep learning, and signal processing, with experience in 
+            designing and implementing innovative algorithms for data representation, optimization, and computer vision.</p>
+            <h2>Links</h2>
+            <div class="links">
+                <a href="https://github.com/bashir-sadeghi" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/bashir-sadeghi/" target="_blank">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=3qQ2MYMAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+            </div>
+            <div class="download">
+                <a href="Bashir_Sadeghi_CV.pdf" download>Download CV</a>
+            </div>
+        </div>
 
-  <!-- Skills Tab -->
-  <div id="Skills" class="tabcontent">
-    <h2>Skills</h2>
-    <p>
-      [List your professional skills, both technical and soft skills. You can also mention software or tools you’re proficient in.]
-    </p>
-  </div>
+        <!-- Education Section -->
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in Computer Science and Engineering</strong>, Michigan State University (2023)</li>
+                <li><strong>Master of Science in Electrical and Electronics Engineering</strong>, Eastern Mediterranean University</li>
+                <li><strong>Bachelor of Science in Electrical and Computer Engineering</strong>, Noshirvani University of Technology</li>
+            </ul>
+        </div>
 
-  <!-- Projects Tab -->
-  <div id="Projects" class="tabcontent">
-    <h2>Projects</h2>
-    <p>
-      [Describe significant projects you have worked on. Include your role, technologies used, and the outcomes or impact of each project.]
-    </p>
-  </div>
+        <!-- Experience Section -->
+        <div id="experience" class="section">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Research Associate</strong> at Michigan State University (2023 - Present)</li>
+                <li><strong>Research Assistant</strong> at Michigan State University (2017 - 2023)</li>
+                <li><strong>Research Intern</strong> at Palo Alto Research Center (2020)</li>
+                <li><strong>Teaching Assistant</strong> at Michigan State University (2017 - 2021)</li>
+            </ul>
+        </div>
 
-  <!-- Contact Tab -->
-  <div id="Contact" class="tabcontent">
-    <h2>Contact</h2>
-    <p>
-      [Provide your contact information, such as your email address, phone number, and links to professional profiles like LinkedIn or GitHub.]
-    </p>
-  </div>
+        <!-- Projects Section -->
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/bashir-sadeghi/kernel-adversarial-representation-learning" target="_blank">Kernel-Adversarial Representation Learning</a></li>
+                <li><a href="https://github.com/bashir-sadeghi/closed-form-adversarial-representation-learning" target="_blank">Closed-Form Adversarial Representation Learning</a></li>
+            </ul>
+        </div>
 
-  <!-- JavaScript to Handle Tab Switching -->
-  <script>
-    function openTab(evt, tabName) {
-      // Hide all tab contents
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
+        <!-- Publications Section -->
+        <div id="publications" class="section">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://openreview.net/forum?id=3gfpBR1ncr&referrer" target="_blank">On Characterizing the Trade-off in Invariant Representation Learning, TMLR 2022</a></li>
+            </ul>
+        </div>
 
-      // Remove active class from all tab links
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
+        <!-- Skills Section -->
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, C/C++, MATLAB</li>
+                <li>ML/DL: TensorFlow, PyTorch, LibTorch</li>
+                <li>Databases: MySQL, Microsoft SQL Server</li>
+            </ul>
+        </div>
 
-      // Show the current tab's content and mark its link as active
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.classList.add("active");
-    }
+        <!-- Patents Section -->
+        <div id="patents" class="section">
+            <h2>Patents</h2>
+            <ul>
+                <li><a href="https://www.freepatentsonline.com/y2022/0398502.html" target="_blank">Adversarial Machine Learning with Ensembles</a></li>
+            </ul>
+        </div>
 
-    // Open the first tab by default when the page loads
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector(".tablinks").click();
-    });
-  </script>
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sadeghib@msu.edu">sadeghib@msu.edu</a></p>
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.getElementsByClassName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+
 </body>
 </html>
